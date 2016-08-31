@@ -1,0 +1,23 @@
+<div class="panel-heading">
+	Excel data
+</div>
+<div class="panel-body" v-if="$loadingRouteData">
+	Loading data {{ loadingRouteData }}
+</div>
+<div class="panel-body" v-if="messages.length > 0">
+	<div v-for="message in messages" class="alert alert-{{ message.type }} alert-dismissible" role="alert">
+		{{ message.message }}
+	</div>
+</div>
+
+<div class="panel-body" v-if=" ! $loadingRouteData && excel.length == 0">
+	Excel data empty!
+</div>
+
+<table class="table" v-if=" ! $loadingRouteData && excel.length > 0">
+	<tbody>
+	<tr v-for="tr in excel">
+		<td v-for="td in tr">{{ td }}</td>
+	</tr>
+	</tbody>
+</table>

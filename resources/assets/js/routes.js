@@ -56,6 +56,21 @@ module.exports = {
       '/terms': {
         component: require('./compiled/pages/terms.vue')
       },
+      '/excel': {
+        component: require('./compiled/pages/excel.vue'),
+        auth: true,
+        subRoutes: {
+          '/': {
+            component: require('./compiled/pages/excel/index.vue')
+          },
+          '/:id': {
+            component: require('./compiled/pages/excel/show.vue')
+          },
+          '/create': {
+            component: require('./compiled/pages/excel/create.vue')
+          }
+        }
+      },
       '*': {
         component: require('./compiled/pages/404.vue')
       }
