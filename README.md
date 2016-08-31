@@ -17,7 +17,8 @@ gulp
 ### Step 3: Serve it
 
 ```
-node public/server.js
+cd public
+node server.js
 ```
 and then hit http://localhost:8888
 
