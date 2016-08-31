@@ -6,6 +6,8 @@ git clone -b file-upload https://github.com/artisk82/vue-starter.git
 
 ```
 npm install
+npm install connect
+npm install server-static
 ```
 
 ### Step 2: Run Gulp
